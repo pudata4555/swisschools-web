@@ -34,18 +34,21 @@ export default async function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-white">
         <video
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
         >
           <source src="/media/bannerVideo.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-ink/85 via-ink/70 to-brand/30" />
+        {/* Left-weighted overlay: keeps text readable while letting the video show */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30" />
+        <div className="absolute inset-0 bg-ink/20" />
         <div className="container-x relative py-24 sm:py-32">
           <p className="eyebrow text-brand-100">Your Swiss education journey starts here</p>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
             Discover your future in <span className="text-brand-100">Switzerland</span>
           </h1>
           <p className="mt-5 max-w-xl text-base text-white/80 sm:text-lg">
@@ -166,9 +169,9 @@ export default async function HomePage() {
               ["Profile evaluation", "Get a shortlist that fits your profile.", "/tools/profile-evaluation"],
               ["Compare universities", "Weigh options side by side.", "/tools/compare"],
             ].map(([t, b, href]) => (
-              <Link key={href} href={href} className="rounded-2xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10">
-                <h3 className="text-base font-semibold">{t}</h3>
-                <p className="mt-1.5 text-sm text-white/70">{b}</p>
+              <Link key={href} href={href} className="group rounded-2xl border border-white/15 bg-white/[0.07] p-5 transition-colors hover:border-white/30 hover:bg-white/[0.12]">
+                <h3 className="text-base font-semibold text-white group-hover:text-brand-100">{t}</h3>
+                <p className="mt-1.5 text-sm text-white/75">{b}</p>
               </Link>
             ))}
           </div>

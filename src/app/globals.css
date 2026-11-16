@@ -10,7 +10,8 @@
     @apply bg-white text-ink antialiased font-sans;
   }
   h1, h2, h3, h4 {
-    @apply font-display font-semibold tracking-tight text-ink;
+    @apply font-display font-semibold tracking-tight;
+    color: inherit;
   }
 }
 
