@@ -35,12 +35,8 @@ export default function Footer() {
     <footer className="mt-20 border-t border-line bg-cloud">
       <div className="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand font-display text-lg font-bold text-white">S</span>
-            <span className="font-display text-lg font-bold text-ink">
-              Swis<span className="text-brand">Schools</span>
-            </span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-white.png" alt="SwisSchools" className="h-9 w-auto" />
           <p className="mt-4 max-w-xs text-sm text-ink-muted">
             Guidance for international students who want to study in Switzerland —
             curated programmes, transparent costs and step-by-step application support.

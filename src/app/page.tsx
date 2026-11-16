@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroVideo from "@/components/HeroVideo";
 import { getUniversities, getCourses, getBlogs } from "@/lib/api";
 import UniversityCard from "@/components/UniversityCard";
 import CourseCard from "@/components/CourseCard";
@@ -33,16 +34,7 @@ export default async function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-white">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        >
-          <source src="/media/bannerVideo.mp4" type="video/mp4" />
-        </video>
+        <HeroVideo />
         {/* Left-weighted overlay: keeps text readable while letting the video show */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30" />
         <div className="absolute inset-0 bg-ink/20" />

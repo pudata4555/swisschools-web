@@ -32,11 +32,9 @@ export default function Header() {
       </div>
 
       <div className="container-x flex h-[72px] items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand font-display text-lg font-bold text-white">S</span>
-          <span className="font-display text-lg font-bold text-ink">
-            Swis<span className="text-brand">Schools</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="SwisSchools — Study in Switzerland" className="h-9 w-auto sm:h-10" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
